@@ -4,13 +4,13 @@
             "type": "docker-build",
             "name": "Docker Build",
             "file": "Dockerfile",
-            "buildOptions": "-t python-container",
+            "buildOptions": "-t mega-tictactoe-server",
         },
         {
             "type": "docker-run",
             "name": "Docker Run",
             "dependsOn": ["Docker Build"],
-            "imageIdOrName": "python-container",
+            "imageIdOrName": "mega-tictactoe-server",
         },
         
     ]
