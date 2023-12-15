@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "type": "docker-build",
+            "name": "Docker Build",
+            "file": "Dockerfile",
+            "buildOptions": "-t python-container",
+        },
+        {
+            "type": "docker-run",
+            "name": "Docker Run",
+            "dependsOn": ["Docker Build"],
+            "imageIdOrName": "python-container",
+        },
+        
+    ]
+}
